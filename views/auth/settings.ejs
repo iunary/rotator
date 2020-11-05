@@ -1,0 +1,46 @@
+<%- include ('../partials/header') %>
+
+   <main class="content-wrapper vertically-center">
+      <div class="container content">
+         <div class="row">
+            <div class="col-lg-12">
+
+               <div class="content-container form-content-settings shadow-sm rounded ">
+                  <h3 class="pt-3 pl-4 pb-3">Reset Username & Password</h3>
+
+                  <form action="/reset?_method=PUT" method="POST" class="clearfix create-edit-form">
+
+                     <div class="form-group">
+
+                        <label for="inputAddress">Username</label>
+                        <input type="text" class="form-control name-input" name="username" value="<%= username %>" autocomplete="off" required>
+
+                     </div>
+
+                     <div class="form-group">
+
+                        <label for="inputAddress">Old Password</label>
+                        <input type="password" class="form-control name-input" name="oldPassword" autocomplete="off" required>
+
+                     </div>
+
+                     <div class="form-group">
+
+                        <label for="inputAddress">New Password</label>
+                        <input type="password" class="form-control name-input" name="newPassword" autocomplete="off" required>
+
+                     </div>
+
+                     <hr class="my-3">
+                     <p class="error-message float-left"></p>
+                     
+                     <button type="submit" class="btn btn-primary float-right py-1">Update</button>
+   
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+<%- include ('../partials/footer') %>
